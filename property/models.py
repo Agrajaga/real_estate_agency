@@ -70,7 +70,7 @@ class Owner(models.Model):
 
 
 class Complaint(models.Model):
-    user = models.ForeignKey(
+    complainant = models.ForeignKey(
         User, on_delete=models.SET_NULL, verbose_name='Кто жаловался', null=True)
     flat = models.ForeignKey(Flat, on_delete=models.CASCADE,
                              verbose_name='Квартира, на которую пожаловались')
